@@ -1,12 +1,12 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Navbar from '../Navbar';
-import withSplashScreen from '../SplashScreen';
+import withSplashScreen from '../ui/SplashScreen';
 
 const MainLayout = () => {
     return (
         <div className="relative h-screen w-screen flex bg-black overflow-hidden">
-            <div className="flex flex-col w-full z-10">
+            <div className="flex flex-col w-full z-10 overflow-auto no-scrollbar">
                 <Navbar />
                 <Outlet />
             </div>

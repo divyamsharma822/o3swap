@@ -1,15 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { BriefcaseBusiness, Minus, Search, Settings } from 'lucide-react';
+import { motion } from 'framer-motion';
+import ConnectWalletDialog from './ConnectWalletDialog';
 import LOGO from '@assets/navbar/logo.png';
 import TWITTER_LOGO from '@assets/navbar/twitter.svg';
 import DISCORD_LOGO from '@assets/navbar/discord.svg';
-import { motion } from 'framer-motion';
 
 const Navbar = ({}) => {
     return (
         <motion.div
-            className="navbar fixed top-0 left-0 right-0 flex justify-around text-white p-4 py-4 border-2 border-t-0 border-slate-600 mx-[100px] rounded-b-xl bg-[#171717]/30 backdrop-blur-2xl"
+            className="navbar hidden md:flex z-30 top-0 left-0 right-0 justify-around text-white p-4 py-4 border-2 border-t-0 border-slate-600 mx-[100px] rounded-b-xl bg-[#171717]/30 backdrop-blur-2xl"
             initial={{ y: -100 }}
             animate={{ y: 0 }}
         >
@@ -17,7 +18,7 @@ const Navbar = ({}) => {
                 <img
                     src={LOGO}
                     alt="logo"
-                    className="object-contain h-5 mr-5"
+                    className="object-contain h-8 mr-5"
                 />
                 {[
                     ['Swap', '/'],
@@ -66,20 +67,11 @@ const Navbar = ({}) => {
                     strokeWidth={3}
                 />
                 <div className="flex gap-4 justify-center">
-                    {/* <div className="search hidden lg:flex items-center gap-2 px-4 py-1 rounded-full bg-[#1c1e27]">
-                        <Search className="text-slate-300" size={17} />
-                        <input
-                            type="text"
-                            className="bg-transparent focus:outline-none focus:ring-0 w-[150px]"
-                            placeholder="Search"
-                        />
-                    </div> */}
-                    <button
-                        type="button"
-                        className="bg-[#2c59ae49] text-white font-bold rounded-full px-4 py-1 cursor-pointer active:scale-95 animate-pulse"
-                    >
-                        Connect Wallet
-                    </button>
+                    <ConnectWalletDialog
+                        buttonStyle={
+                            'bg-[#2c59ae49] text-white font-bold rounded-full px-4 py-1 cursor-pointer active:scale-95 animate-pulse'
+                        }
+                    />
                 </div>
             </div>
         </motion.div>

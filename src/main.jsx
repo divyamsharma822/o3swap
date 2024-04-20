@@ -5,7 +5,7 @@ import './index.scss';
 
 import Login from '@pages/login/Login';
 import MainLayout from '@components/layouts/MainLayout';
-import Converter from '@components/converter/Converter';
+import Converter from '@components/Converter';
 
 const router = createBrowserRouter([
     {

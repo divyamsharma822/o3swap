@@ -1,0 +1,27 @@
+// Resource : https://www.30secondsofcode.org/react/hooks/p/1/
+import React from "react";
+
+const useClickOutside = (ref, callback) => {
+    const handleClick = (e) => {
+        if (ref.current && !ref.current.contains(e.target)) {
+            callback();
+        }
+    };
+    React.useEffect(() => {
+        document.addEventListener("click", handleClick);
+        return () => {
+            document.removeEventListener("click", handleClick);
+        };
+    });
+};
+
+export default useClickOutside;
+
+// Use of this hook
+//
+//          () => {
+//             const clickRef = React.useRef();
+//             useClickOutside(clickRef, onClickFn);
+
+//             return()
+//          }

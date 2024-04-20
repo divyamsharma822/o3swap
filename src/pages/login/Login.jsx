@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import DCLogo from '@assets/drone-center-logo.png';
 import { cn } from '@lib/utils';
 import DRONE_VIDEO from '@assets/drone-video.mp4';
-import withSplashScreen from '@components/SplashScreen';
+import withSplashScreen from '@components/ui/SplashScreen';
 
 const initialValues = {
     email: '',
