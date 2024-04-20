@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils';
 import { Formik } from 'formik';
 import { motion } from 'framer-motion';
 import {
+    AlignJustify,
     ArrowUpDown,
     ChevronDown,
     OctagonAlert,
@@ -12,6 +13,8 @@ import {
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import TokenSearchDialog from './TokenSearchDialog';
 import ConnectWalletDialog from './ConnectWalletDialog';
+import LOGO from '@assets/navbar/logo.png';
+import { NavLink } from 'react-router-dom';
 
 const Converter = ({}) => {
     const [openSetting, setOpenSetting] = useState(false);
@@ -59,9 +62,17 @@ const Converter = ({}) => {
         <>
             <div className="converter h-full w-full flex flex-col items-center justify-center text-white">
                 {!openSetting ? (
-                    <div className="flex flex-col gap-5 w-screen h-screen max-w-[500px] md:border-2 md:border-[#2c59ae49] bg-[#1b1e27] p-10 rounded-none md:rounded-3xl md:mt-[100px]">
+                    <div className="flex flex-col gap-5 w-screen h-screen md:max-w-[500px] md:border-2 md:border-[#2c59ae49] bg-[#1b1e27] p-10 rounded-none md:rounded-3xl md:mt-[200px] overflow-scroll md:overflow-visible">
+                        <div className="flex md:hidden justify-between items-center bg-[#262b36] rounded-full p-4 mb-5">
+                            <img
+                                src={LOGO}
+                                alt="logo"
+                                className="object-contain h-8 bg-clip-text"
+                            />
+                            <AlignJustify />
+                        </div>
                         <div className="flex justify-between items-center">
-                            <div className="text-lg">Swap</div>
+                            <div className="text-3xl">Swap</div>
                             <Settings2
                                 className="bg-[#292c35] p-2 rounded-full cursor-pointer hover:bg-[#2c59ae49]"
                                 size={35}

@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.scss';
 
-import Login from '@pages/login/Login';
 import MainLayout from '@components/layouts/MainLayout';
 import Converter from '@components/Converter';
+import Hub from './pages/hub/Hub';
 
 const router = createBrowserRouter([
     {
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/hub',
-                element: <div>HUB</div>,
+                element: <Hub />,
             },
         ],
     },

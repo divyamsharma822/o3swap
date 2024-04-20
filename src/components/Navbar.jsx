@@ -6,11 +6,15 @@ import ConnectWalletDialog from './ConnectWalletDialog';
 import LOGO from '@assets/navbar/logo.png';
 import TWITTER_LOGO from '@assets/navbar/twitter.svg';
 import DISCORD_LOGO from '@assets/navbar/discord.svg';
+import { cn } from '@/lib/utils';
 
-const Navbar = ({}) => {
+const Navbar = ({ className }) => {
     return (
         <motion.div
-            className="navbar hidden md:flex z-30 top-0 left-0 right-0 justify-around text-white p-4 py-4 border-2 border-t-0 border-slate-600 mx-[100px] rounded-b-xl bg-[#171717]/30 backdrop-blur-2xl"
+            className={cn(
+                'navbar z-30 top-0 left-0 right-0 justify-around text-white p-4 py-4 border-2 border-t-0 border-slate-600 mx-[100px] rounded-b-xl bg-[#171717]/30 backdrop-blur-2xl',
+                className
+            )}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
         >
@@ -66,7 +70,7 @@ const Navbar = ({}) => {
                     className="hidden 2xl:flex rotate-90 text-slate-600"
                     strokeWidth={3}
                 />
-                <div className="flex gap-4 justify-center">
+                <div className="hidden lg:flex gap-4 justify-center">
                     <ConnectWalletDialog
                         buttonStyle={
                             'bg-[#2c59ae49] text-white font-bold rounded-full px-4 py-1 cursor-pointer active:scale-95 animate-pulse'

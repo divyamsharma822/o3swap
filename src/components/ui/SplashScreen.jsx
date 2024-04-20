@@ -5,7 +5,12 @@ import DCLOGO from '@assets/navbar/logo.png';
 
 function SplashMessage() {
     return (
-        <motion.div className="absolute inset-0 min-w-screen min-h-screen bg-black flex justify-center items-center font-extrabold text-lg text-black overflow-hidden" initial={{ opacity: 1 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+        <motion.div
+            className="absolute inset-0 min-w-screen min-h-screen bg-black flex justify-center items-center font-extrabold text-lg text-black overflow-hidden"
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+        >
             <PulseSyncFadeFast duration={3.4} delay={0.8} />
         </motion.div>
     );
@@ -43,7 +48,13 @@ export default function withSplashScreen(WrappedComponent) {
     };
 }
 
-const PulseSyncFadeFast = ({ n = 4, duration = 1, delay = 0.5, width = 200, gap = 50 }) => {
+const PulseSyncFadeFast = ({
+    n = 4,
+    duration = 1,
+    delay = 0.5,
+    width = 200,
+    gap = 50,
+}) => {
     return (
         <motion.div
             style={{
@@ -65,7 +76,8 @@ const PulseSyncFadeFast = ({ n = 4, duration = 1, delay = 0.5, width = 200, gap 
                             transition={{ delay: 0.5 }}
                             style={{
                                 borderRadius: '50%',
-                                background: 'radial-gradient(50% 50% at 50% 50%, rgba(252, 252, 252, 0.3) 0%, #2c59ae49 100%)',
+                                background:
+                                    'radial-gradient(50% 50% at 50% 50%, rgba(252, 252, 252, 0.3) 0%, #2c59ae49 100%)',
                                 border: '1px solid #287d51',
                                 opacity: 0.5,
                                 gridArea: '1 / 1 / 2 / 2',
@@ -85,8 +97,18 @@ const PulseSyncFadeFast = ({ n = 4, duration = 1, delay = 0.5, width = 200, gap 
                                 },
                             })}
                         />
-                        <motion.div className="absolute flex z-10" initial={{ scale: 0.5 }} animate={{ scale: 1 }} transition={{ duration: 0.2 }}>
-                            <img src={DCLOGO} alt="dc-logo" width={window.innerWidth < 500 ? 200 : 400} className="object-contain" />
+                        <motion.div
+                            className="absolute flex z-10"
+                            initial={{ scale: 0.5 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 0.2 }}
+                        >
+                            <img
+                                src={DCLOGO}
+                                alt="dc-logo"
+                                width={window.innerWidth < 500 ? 150 : 300}
+                                className="object-contain"
+                            />
                         </motion.div>
                     </React.Fragment>
                 );
