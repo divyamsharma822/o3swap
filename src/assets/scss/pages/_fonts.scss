@@ -1,0 +1,144 @@
+  
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts-icon/icomoon.eot?31l0mt');
+  src:  url('../fonts-icon/icomoon.eot?31l0mt#iefix') format('embedded-opentype'),
+    url('../fonts-icon/icomoon.ttf?31l0mt') format('truetype'),
+    url('../fonts-icon/icomoon.woff?31l0mt') format('woff'),
+    url('../fonts-icon/icomoon.svg?31l0mt#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    // speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-user-magmt:before {
+    content: "\e917";
+  }
+  .icon-probes-catalog:before {
+    content: "\e919";
+  }
+  .icon-logout-new:before {
+    content: "\e91a";
+  }
+  .icon-user-new:before {
+    content: "\e91b";
+  }
+  .icon-download:before {
+    content: "\e91c";
+    color: #fff;
+  }
+  .icon-active:before {
+    content: "\e900";
+    color: #1dcd94;
+  }
+  .icon-anytime:before {
+    content: "\e901";
+    color: #c33;
+  }
+  .icon-calender:before {
+    content: "\e902";
+    color: #aaabae;
+  }
+  .icon-checkbox-active .path1:before {
+    content: "\e903";
+    color: rgb(204, 51, 51);
+  }
+  .icon-checkbox-active .path2:before {
+    content: "\e904";
+    margin-left: -1em;
+    color: rgb(255, 255, 255);
+  }
+  .icon-checkbox-active-blue:before {
+    content: "\e905";
+  }
+  .icon-close-with-circle:before {
+    content: "\e906";
+    color: #c33;
+  }
+  .icon-copy:before {
+    content: "\e907";
+    color: #c33;
+  }
+  .icon-cut-eye:before {
+    content: "\e908";
+    color: #aaabae;
+  }
+  .icon-dashboard:before {
+    content: "\e909";
+    color: #aaabae;
+  }
+  .icon-delete:before {
+    content: "\e90a";
+    color: #c33;
+  }
+  .icon-edit:before {
+    content: "\e90b";
+    color: #c33;
+  }
+  .icon-email:before {
+    content: "\e90c";
+    color: #aaabae;
+  }
+  .icon-filter:before {
+    content: "\e90d";
+    color: #aaabae;
+  }
+  .icon-inactive:before {
+    content: "\e90e";
+    color: #e83636;
+  }
+  .icon-info:before {
+    content: "\e90f";
+    color: #aaabae;
+  }
+  .icon-lock:before {
+    content: "\e910";
+  }
+  .icon-open-eye:before {
+    content: "\e911";
+    color: #aaabae;
+  }
+  .icon-search:before {
+    content: "\e912";
+    color: #aaabae;
+  }
+  .icon-ssl:before {
+    content: "\e913";
+    color: #c33;
+  }
+  .icon-subscription:before {
+    content: "\e914";
+  }
+  .icon-tank:before {
+    content: "\e915";
+    color: #aaabae;
+  }
+  .icon-trusted:before {
+    content: "\e916";
+    color: #c33;
+  }
+  .icon-user:before {
+    content: "\e917";
+    color: #aaabae;
+  }
+  .icon-username:before {
+    content: "\e918";
+    color: #aaabae;
+  }
+  
